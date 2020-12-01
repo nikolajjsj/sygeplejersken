@@ -30,7 +30,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  #assets:
+  assets:
+    - assets/images/
   #  - assets/icon/sialia_android.png
   #  - assets/icon/sialia_ios.png
 
