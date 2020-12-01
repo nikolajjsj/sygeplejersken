@@ -62,6 +62,7 @@ class HomePage extends StatelessWidget {
           return ToolCard(
             title: _tool.title,
             imageAsset: _tool.imageAsset,
+            tool: _tool.tool,
           );
         },
       ),
