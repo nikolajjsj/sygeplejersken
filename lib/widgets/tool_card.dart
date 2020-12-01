@@ -1,13 +1,16 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ToolCard extends StatelessWidget {
   final String title;
   final String imageAsset;
+  final Widget tool;
 
   const ToolCard({
     Key key,
     @required this.title,
     @required this.imageAsset,
+    @required this.tool,
   }) : super(key: key);
 
   @override
@@ -22,22 +25,27 @@ class ToolCard extends StatelessWidget {
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(12.0),
-        child: Row(
-          children: [
-            const SizedBox(width: 12.0),
-            Text(
-              title,
-              style: _textStyle,
-              overflow: TextOverflow.ellipsis,
-            ),
-            Spacer(),
-            Image.asset(
-              imageAsset,
-              height: _imageHeight,
-              fit: BoxFit.cover,
-              width: _imageWidth,
-            ),
-          ],
+        child: InkWell(
+          onTap: () => Navigator.of(context).push(
+            CupertinoPageRoute(builder: (context) => tool),
+          ),
+          child: Row(
+            children: [
+              const SizedBox(width: 12.0),
+              Text(
+                title,
+                style: _textStyle,
+                overflow: TextOverflow.ellipsis,
+              ),
+              Spacer(),
+              Image.asset(
+                imageAsset,
+                height: _imageHeight,
+                fit: BoxFit.cover,
+                width: _imageWidth,
+              ),
+            ],
+          ),
         ),
       ),
     );
