@@ -10,10 +10,6 @@ class MedicinTool extends StatefulWidget {
 class _MedicinToolState extends State<MedicinTool> {
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-
-    // variables
-
     return Scaffold(
       appBar: AppBar(title: Text('Medicinregning'), centerTitle: true),
       body: Column(),

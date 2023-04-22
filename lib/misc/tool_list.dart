@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:sygeplejersken/models/tool_model.dart';
 import 'package:sygeplejersken/screens/tools/bmi.dart';
 import 'package:sygeplejersken/screens/tools/braden.dart';

@@ -10,10 +10,6 @@ class SondeTool extends StatefulWidget {
 class _SondeToolState extends State<SondeTool> {
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-
-    // variables
-
     return Scaffold(
       appBar: AppBar(title: Text('Sondeernæring'), centerTitle: true),
       body: Column(),

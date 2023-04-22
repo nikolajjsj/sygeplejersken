@@ -1,7 +1,7 @@
 name: sygeplejersken
 description: A new Flutter application.
-publish_to: 'none'
-version: 1.0.0+1
+publish_to: "none"
+version: 1.8.3+19
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -10,30 +10,20 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.0
-  # state management
-  flutter_bloc: ^6.1.1
-  hydrated_bloc: ^6.1.0
-  equatable: ^1.2.5
-  shared_preferences: '>=0.5.12+4 <2.0.0' # save user preferences
+  flutter_bloc: ^8.1.2
+  hydrated_bloc: ^9.1.0
+  equatable: ^2.0.5
+  shared_preferences: "^2.1.0"
 
 dev_dependencies:
-  flutter_launcher_icons: ^0.8.1
+  flutter_launcher_icons: ^0.13.1
   flutter_test:
     sdk: flutter
-
-#flutter_icons:
-#  android: true
-#  ios: true
-#  image_path_android: 'assets/icon/sialia_android.png'
-#  image_path_ios: 'assets/icon/sialia_ios.png'
-#  image_path: 'assets/icon/sialia.png'
 
 flutter:
   uses-material-design: true
   assets:
     - assets/images/
-  #  - assets/icon/sialia_android.png
-  #  - assets/icon/sialia_ios.png
 
   fonts:
     - family: OpenSans

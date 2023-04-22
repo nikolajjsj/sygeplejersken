@@ -8,13 +8,14 @@ class BmiTool extends StatefulWidget {
 }
 
 class _BmiToolState extends State<BmiTool> {
+  // variables
+  int _height = 170;
+  int _weight = 70;
+
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
 
-    // variables
-    int _height = 170;
-    int _weight = 70;
     double _bmi = _weight / ((_height / 100) * (_height / 100));
 
     return Scaffold(
@@ -24,8 +25,8 @@ class _BmiToolState extends State<BmiTool> {
           Card(
             child: Column(
               children: [
-                Text('Højde', style: textTheme.headline6),
-                Text('$_height cm', style: textTheme.headline5),
+                Text('Højde', style: textTheme.titleLarge),
+                Text('$_height cm', style: textTheme.headlineSmall),
                 Slider(
                   value: _height.toDouble(),
                   onChanged: (val) => setState(() => _height = val.toInt()),
@@ -38,8 +39,8 @@ class _BmiToolState extends State<BmiTool> {
           Card(
             child: Column(
               children: [
-                Text('Vægt', style: textTheme.headline6),
-                Text('$_weight kg', style: textTheme.headline5),
+                Text('Vægt', style: textTheme.titleLarge),
+                Text('$_weight kg', style: textTheme.headlineSmall),
                 Slider(
                   value: _weight.toDouble(),
                   onChanged: (val) => setState(() => _weight = val.toInt()),
@@ -52,8 +53,11 @@ class _BmiToolState extends State<BmiTool> {
           Card(
             child: Column(
               children: [
-                Text('Normal vægt', style: textTheme.headline6,),
-                Text(_bmi.toStringAsFixed(1), style: textTheme.headline1),
+                Text(
+                  'Normal vægt',
+                  style: textTheme.titleLarge,
+                ),
+                Text(_bmi.toStringAsFixed(1), style: textTheme.displayLarge),
                 Text(
                   'Moderat risiko for at udvikle hjertesygdomme, højt blodtryk, slagtilfælde, diabetes',
                   textAlign: TextAlign.center,

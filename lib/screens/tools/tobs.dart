@@ -10,10 +10,6 @@ class TobsTool extends StatefulWidget {
 class _TobsToolState extends State<TobsTool> {
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-
-    // variables
-
     return Scaffold(
       appBar: AppBar(title: Text('TOBS'), centerTitle: true),
       body: Column(),

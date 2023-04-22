@@ -10,10 +10,6 @@ class GcsTool extends StatefulWidget {
 class _GcsToolState extends State<GcsTool> {
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-
-    // variables
-
     return Scaffold(
       appBar: AppBar(title: Text('GCS'), centerTitle: true),
       body: Column(),

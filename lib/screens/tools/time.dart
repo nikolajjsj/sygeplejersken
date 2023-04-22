@@ -10,10 +10,6 @@ class TimeTool extends StatefulWidget {
 class _TimeToolState extends State<TimeTool> {
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-
-    // variables
-
     return Scaffold(
       appBar: AppBar(title: Text('TIME - modellen'), centerTitle: true),
       body: Column(),

@@ -15,9 +15,9 @@ class ToolCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _imageHeight = 75.0;
+    final _imageHeight = 125.0;
     final _imageWidth = MediaQuery.of(context).size.width * .5;
-    final _textStyle = Theme.of(context).textTheme.headline6;
+    final _textStyle = Theme.of(context).textTheme.titleLarge;
 
     return Card(
       shape: RoundedRectangleBorder(
@@ -32,10 +32,14 @@ class ToolCard extends StatelessWidget {
           child: Row(
             children: [
               const SizedBox(width: 12.0),
-              Text(
-                title,
-                style: _textStyle,
-                overflow: TextOverflow.ellipsis,
+              Column(
+                children: [
+                  Text(
+                    title,
+                    style: _textStyle,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
               ),
               Spacer(),
               Image.asset(
